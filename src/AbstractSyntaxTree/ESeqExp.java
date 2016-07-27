@@ -16,7 +16,8 @@ public class ESeqExp extends Exp {
 	}
 	
 	public int evaluate(Memory mem) {
-		throw new UnsupportedOperationException();
+		this.stm.run(mem);
+		return this.exp.evaluate(mem);
 	}
 
 }

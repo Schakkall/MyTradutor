@@ -1,5 +1,6 @@
 package Abstractions;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Memory {
@@ -7,6 +8,10 @@ public class Memory {
 	
 	public Memory(Map<String, Integer> mem){
 		this.mem = mem;
+	}
+
+	public Memory(){
+		this.mem = new HashMap<String, Integer>();
 	}
 	
 	public void update(String id, int value){

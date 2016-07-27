@@ -14,8 +14,10 @@ public class PrintStm extends Stm {
 	}
 	
 	public void run(Memory mem) {
-		throw new UnsupportedOperationException();
-	}
-	
-		
+		if (exps instanceof SingleExpList)  
+			System.out.println(this.exps.evaluate(mem));
+		else
+			System.out.println(this.exps.evaluateAsList(mem).toString().replace("[", "").replace("]",""));
+			
+	}		
 }
