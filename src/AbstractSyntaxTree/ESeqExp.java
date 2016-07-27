@@ -12,7 +12,7 @@ public class ESeqExp extends Exp {
 	}
 	
 	public String toString() {
-		return this.stm.toString() + "," + this.exp.toString();
+		return "(" + this.stm.toString() + "," + this.exp.toString() + ")";
 	}
 	
 	public int evaluate(Memory mem) {
